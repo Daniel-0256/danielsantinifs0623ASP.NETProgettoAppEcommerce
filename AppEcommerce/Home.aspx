@@ -9,12 +9,12 @@
                 <asp:Repeater ID="RepeaterArticoli" runat="server">
                     <ItemTemplate>
                         <div class="col-md-3">
-                            <div class="card ogniCard">
+                            <div class="card homeCard">
                                 <img class="card-img-top" src='<%# Eval("Immagine") %>' alt='<%# Eval("Nome") %>'>
                                 <div class="card-body p-0">
                                     <h5 class="card-title"><%# Eval("Nome") %></h5>
-                                    <p class="ogniCard-description"><%# Eval("Descrizione") %></p>
-                                    <div class="card-footer">
+                                    <p class="homeCard-description"><%# Eval("Descrizione") %></p>
+                                    <div class="homeCard-footer">
                                         <p class="card-text">Prezzo: <%# string.Format("{0:C}", Eval("Prezzo")) %></p>
                                         <asp:HyperLink ID="lnkDettaglio" runat="server" NavigateUrl='<%# Eval("ID", "~/DettaglioArticolo.aspx?ID={0}") %>' Text="Visualizza dettagli" />
                                     </div>
